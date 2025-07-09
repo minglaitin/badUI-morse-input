@@ -1,14 +1,16 @@
 - [ ] input field
-  - [ ] username
-  - [ ] password
-  - [ ] disable computer keyboard
+  - [x] username field
+  - [ ] password field
+  - [ ] update value by morse input
+  - [ ] backspace
   - [ ] click to open telegraph key
+  - [ ] disable computer keyboard
 
-- [ ] morse key
-  - [ ] dot (dit): 1 unit
-  - [ ] dash (dah): 3 units
-  - [ ] space between dots/dashes: 1 unit
-  - [ ] space between characters: 3 units
+- [x] morse key functionality
+  - [x] dot (dit): 1 unit (< 0.2 sec)
+  - [x] dash (dah): 3 units (>= 0.2 sec)
+  - [x] space between dots/dashes: 1 unit (every mouseup event)
+  - [x] space between characters: 3 units (>= 1 sec)
 
 - [ ] morse code chart
   - [ ] chart icon
@@ -16,5 +18,9 @@
   - [ ] caption: Morse code chart
 
 - [ ] morse code to implement
-  - [ ] A-Z
+  - [x] A-Z
   - [ ] 0-9
+
+- [ ] styling
+  - [ ] centering input fields
+  - [ ] morse key icon
