@@ -1,10 +1,18 @@
+// DOM elements
 let morseInput = document.getElementById("morse-input");
 let translatedInput = document.getElementById("translated-input");
 let mouse = document.getElementById("morse-key");
-let startTime, duration;
+let username = document.getElementById("username");
+let password = document.getElementById("password");
+
+// Global variables
+let startTime;
+let duration;
 let letterCode = "";
 let decodedResult = "";
 let timeoutID = 0;
+let usernameFocus = false;
+let passwordFocus = false;
 
 const MORSE_CODE = {
     ".-": "a",
@@ -56,11 +64,19 @@ function decodeChar(code) {
     decodedResult = decodedResult + newChar;
     translatedInput.innerHTML = decodedResult;
 
+    // update value in the textbox on focus
+    if (usernameFocus) {
+        username.value = username.value + newChar;
+    } else if (passwordFocus) {
+        password.value = password.value + newChar;
+    }
+
     // reset current input
     letterCode = "";
     morseInput.innerHTML = letterCode;
 }
 
+// mouse event handlers
 function startHandler() {
     clearTimeout(timeoutID);
     startTime = Date.now();
@@ -83,7 +99,21 @@ function endHandler() {
     }, 1000);
 }
 
+// text box focus handlers
+function usernameFocusHandler() {
+    usernameFocus = true;
+    passwordFocus = false;
+}
+
+function passwordFocusHandler() {
+    passwordFocus = true;
+    usernameFocus = false;
+}
+
 
 mouse.onpointerdown = startHandler;
 mouse.onpointerup = endHandler;
+
+username.onfocus = usernameFocusHandler;
+password.onfocus = passwordFocusHandler;
 

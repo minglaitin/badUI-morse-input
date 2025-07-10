@@ -1,10 +1,10 @@
 - [ ] input field
   - [x] username field
   - [ ] password field
-  - [ ] update value by morse input
+  - [x] update value by morse input
   - [ ] backspace
   - [ ] click to open telegraph key
-  - [ ] disable computer keyboard
+  - [x] disable computer keyboard
 
 - [x] morse key functionality
   - [x] dot (dit): 1 unit (< 0.2 sec)
@@ -19,7 +19,7 @@
 
 - [ ] morse code to implement
   - [x] A-Z
-  - [ ] 0-9
+  - [x] 0-9
 
 - [ ] styling
   - [ ] centering input fields
