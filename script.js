@@ -1,9 +1,11 @@
 // DOM elements
 let morseInput = document.getElementById("morse-input");
-let translatedInput = document.getElementById("translated-input");
+// let translatedInput = document.getElementById("translated-input");
 let mouse = document.getElementById("morse-key");
 let username = document.getElementById("username");
 let password = document.getElementById("password");
+let inputPanel = document.getElementById("input-panel");
+let closeBtn = document.getElementById("close-btn");
 
 // Global variables
 let startTime;
@@ -62,7 +64,7 @@ function decodeChar(code) {
     }
 
     decodedResult = decodedResult + newChar;
-    translatedInput.innerHTML = decodedResult;
+    // translatedInput.innerHTML = decodedResult;
 
     // update value in the textbox on focus
     if (usernameFocus) {
@@ -103,11 +105,17 @@ function endHandler() {
 function usernameFocusHandler() {
     usernameFocus = true;
     passwordFocus = false;
+    inputPanel.style.visibility = "visible";
 }
 
 function passwordFocusHandler() {
     passwordFocus = true;
     usernameFocus = false;
+    inputPanel.style.visibility = "visible";
+}
+
+function closeInputPanel() {
+    inputPanel.style.visibility = "hidden";
 }
 
 
@@ -116,4 +124,6 @@ mouse.onpointerup = endHandler;
 
 username.onfocus = usernameFocusHandler;
 password.onfocus = passwordFocusHandler;
+
+closeBtn.onclick = closeInputPanel;
 

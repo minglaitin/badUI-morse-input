@@ -3,8 +3,8 @@
   - [ ] password field
   - [x] update value by morse input
   - [ ] clear text box
-  - [ ] click to open telegraph key panel
-  - [ ] X button to close telegraph key panel
+  - [x] click to open telegraph key panel
+  - [x] X button to close telegraph key panel
   - [x] disable computer keyboard
 
 - [x] morse key functionality
