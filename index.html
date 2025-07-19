@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <input type="text" id="username" readonly>
-    <input type="text" id="password" readonly>
+    <div class="login-form-container">
+        <form id="login-form" class="login-form">
+            <label for="username" class="login-form-label">Username</label>
+            <input type="text" id="username" class="input-field" readonly>
+            <label for="password" class="login-form-label">Password</label>
+            <input type="text" id="password" class="input-field" readonly>
+            <button class="submit-btn">Submit</button>
+        </form>
+    </div>
     <div id="input-panel">
-        <button id="close-btn">Close</button>
+        <button id="close-btn">&times;</button>
         <div>Current Input: <span id="morse-input"></span></div>
         <!-- <div>Translated Input: <span id="translated-input"></span></div> -->
         <button id="morse-key">Key</button>

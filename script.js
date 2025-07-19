@@ -11,7 +11,7 @@ let closeBtn = document.getElementById("close-btn");
 let startTime;
 let duration;
 let letterCode = "";
-let decodedResult = "";
+// let decodedResult = "";
 let timeoutID = 0;
 let usernameFocus = false;
 let passwordFocus = false;
@@ -63,7 +63,7 @@ function decodeChar(code) {
         newChar = "";
     }
 
-    decodedResult = decodedResult + newChar;
+    // decodedResult = decodedResult + newChar;
     // translatedInput.innerHTML = decodedResult;
 
     // update value in the textbox on focus
