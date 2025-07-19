@@ -4,6 +4,7 @@ let morseInput = document.getElementById("morse-input");
 let mouse = document.getElementById("morse-key");
 let username = document.getElementById("username");
 let password = document.getElementById("password");
+let confirmPassword = document.getElementById("confirm-password");
 let inputPanel = document.getElementById("input-panel");
 let closeBtn = document.getElementById("close-btn");
 
@@ -15,6 +16,7 @@ let letterCode = "";
 let timeoutID = 0;
 let usernameFocus = false;
 let passwordFocus = false;
+let confirmPasswordFocus = false;
 
 const MORSE_CODE = {
     ".-": "a",
@@ -71,6 +73,8 @@ function decodeChar(code) {
         username.value = username.value + newChar;
     } else if (passwordFocus) {
         password.value = password.value + newChar;
+    } else if (confirmPasswordFocus) {
+        confirmPassword.value = confirmPassword.value + newChar;
     }
 
     // reset current input
@@ -101,16 +105,11 @@ function endHandler() {
     }, 1000);
 }
 
-// text box focus handlers
-function usernameFocusHandler() {
-    usernameFocus = true;
-    passwordFocus = false;
-    inputPanel.style.visibility = "visible";
-}
-
-function passwordFocusHandler() {
-    passwordFocus = true;
-    usernameFocus = false;
+// text box focus handler
+function changeFocus(username, password, confirmPassword) {
+    usernameFocus = username;
+    passwordFocus = password;
+    confirmPasswordFocus = confirmPassword;
     inputPanel.style.visibility = "visible";
 }
 
@@ -122,8 +121,9 @@ function closeInputPanel() {
 mouse.onpointerdown = startHandler;
 mouse.onpointerup = endHandler;
 
-username.onfocus = usernameFocusHandler;
-password.onfocus = passwordFocusHandler;
+username.onfocus = () => changeFocus(true, false, false);
+password.onfocus =  () => changeFocus(false, true, false);
+confirmPassword.onfocus = () => changeFocus(false, false, true);
 
 closeBtn.onclick = closeInputPanel;
 
