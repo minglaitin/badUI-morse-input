@@ -6,6 +6,7 @@ let username = document.getElementById("username");
 let password = document.getElementById("password");
 let confirmPassword = document.getElementById("confirm-password");
 let inputPanel = document.getElementById("input-panel");
+let inputPanelContainer = document.getElementById("input-panel-container");
 let closeBtn = document.getElementById("close-btn");
 
 // Global variables
@@ -110,11 +111,14 @@ function changeFocus(username, password, confirmPassword) {
     usernameFocus = username;
     passwordFocus = password;
     confirmPasswordFocus = confirmPassword;
-    inputPanel.style.visibility = "visible";
+
+    inputPanelContainer.style.visibility = "visible";
+    inputPanel.style.bottom = 0;
 }
 
 function closeInputPanel() {
-    inputPanel.style.visibility = "hidden";
+    inputPanelContainer.style.visibility = "hidden";
+    inputPanel.style.bottom = "-200px";
 }
 
 
