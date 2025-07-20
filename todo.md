@@ -25,7 +25,7 @@
     - [ ] current character input
     - [ ] morse code chart
       - [ ] chart icon (or ? icon)
-      - [ ] link to Wikipedia
+      - [x] link to Wikipedia
       - [ ] caption: Morse code chart
 
 - [ ] After submit

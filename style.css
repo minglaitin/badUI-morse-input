@@ -80,6 +80,32 @@ body {
     color: red;
 }
 
+.help-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    text-decoration: none;
+    color: gray;
+    font-size: 20px;
+}
+
 #close-btn:hover {
     color: gray;
+}
+
+#morse-key {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
+#morse-key:hover {
+    background-color: #EEE;
+}
+
+#morse-key img {
+    height: 150px;
 }
