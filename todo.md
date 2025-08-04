@@ -26,7 +26,13 @@
     - [ ] morse code chart
       - [ ] chart icon (or ? icon)
       - [x] link to Wikipedia
+      - [ ] open link on same tab
       - [ ] caption: Morse code chart
+
+- [ ] telegraph key
+  - [ ] svg
+  - [ ] on hover
+  - [ ] on click
 
 - [ ] After submit
   - [ ] check if password & confirm password are same
