@@ -3,7 +3,7 @@
   - [ ] password field
   - [ ] confirm password field
   - [x] update value by morse input
-  - [ ] clear text box
+  - [ ] clear text box (on username field)
   - [x] click to open telegraph key panel
   - [x] X button to close telegraph key panel
   - [x] disable computer keyboard
@@ -13,6 +13,7 @@
   - [x] dash (dah): 3 units (>= 0.2 sec)
   - [x] space between dots/dashes: 1 unit (every mouseup event)
   - [x] space between characters: 3 units (>= 1 sec)
+  - [ ] 8 dots for deleting 1 character (on password fields)
 
 - [x] morse code to implement
   - [x] A-Z
@@ -21,20 +22,23 @@
 - [ ] styling
   - [x] centering input fields
   - [ ] input panel
+    - [ ] display: flex or grid
     - [ ] morse key icon
     - [ ] current character input
     - [ ] morse code chart
       - [ ] chart icon (or ? icon)
       - [x] link to Wikipedia
-      - [ ] open link on same tab
+      - [x] open link on same tab
       - [ ] caption: Morse code chart
 
 - [ ] telegraph key
   - [ ] svg
   - [ ] on hover
   - [ ] on click
+  - [ ] add audio on pointerdown event
 
 - [ ] After submit
+  - [ ] check if all fields contain at least 1 alphabet and at least 1 number
   - [ ] check if password & confirm password are same
     - [ ] if same, dialog box saying welcome
     - [ ] if not same, ask for input again
