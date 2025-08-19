@@ -94,18 +94,23 @@ body {
     color: gray;
 }
 
-#morse-key {
+#morse-key-btn {
     cursor: pointer;
     background-color: white;
-    border: none;
+    border: 1px solid black;
     display: block;
     margin: 0 auto;
+    width: 302px;
+    height: 152px;
+    padding: 0;
 }
 
-#morse-key:hover {
-    background-color: #EEE;
-}
-
+/*
 #morse-key img {
     height: 150px;
+}
+*/
+
+#morse-key {
+    background-color: #EEE;
 }

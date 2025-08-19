@@ -8,6 +8,9 @@ let confirmPassword = document.getElementById("confirm-password");
 let inputPanel = document.getElementById("input-panel");
 let inputPanelContainer = document.getElementById("input-panel-container");
 let closeBtn = document.getElementById("close-btn");
+let morseKeyBtn = document.getElementById("morse-key-btn");
+let spring = document.getElementById("spring");
+let lever = document.getElementById("lever");
 
 // Global variables
 let startTime;
@@ -131,3 +134,12 @@ confirmPassword.onfocus = () => changeFocus(false, false, true);
 
 closeBtn.onclick = closeInputPanel;
 
+morseKeyBtn.onpointerdown = () => {
+    lever.setAttribute("transform", "rotate(3, 113, 55)");
+    spring.setAttribute("transform", "translate(147 79) scale(1, 0.9) translate(-147 -79)");
+}
+
+morseKeyBtn.onpointerup = () => {
+    lever.setAttribute("transform", "rotate(-1, 113, 55)");
+    spring.setAttribute("transform", "translate(147 79) scale(1, 1) translate(-147 -79)");
+}

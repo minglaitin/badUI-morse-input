@@ -24,7 +24,45 @@
             <button id="close-btn">&times;</button>
             <div>Current Input: <span id="morse-input"></span></div>
             <!-- <div>Translated Input: <span id="translated-input"></span></div> -->
-            <button id="morse-key"><img src="./image/machine_denken.png"></button>
+            <button id="morse-key-btn">
+                <!-- <img src="./image/machine_denken.png"> -->
+                <svg id="morse-key" width="300" height="150" viewBox="0 0 300 150">
+
+                    <!-- lever -->
+                    <g id="lever" transform="rotate(-1, 113, 55)"> <!-- rest angle: -1; pressed angle: 3 -->
+                        <!-- metal bar -->
+                        <path d="M 65 55 
+                                L 185 55
+                                Q 200 55 215 65
+                                Q 230 75 245 75
+                                L 270 75" fill="none" stroke="#A0A0A0" stroke-width="10" />
+                        <rect x="177" y="55" width="8" height="10" fill="#A0A0A0" rx="5" ry="2" />
+
+                        <!-- knob -->
+                        <rect x="253" y="60" width="16" height="10" />
+                        <polygon points="261 65 242 50 280 50" stroke="black" stroke-width="5" stroke-linejoin="round" />
+                    </g>
+
+                    <!-- base -->
+                    <rect x="25" y="110" width="250" height="15" fill="brown" />
+                    <rect x="30" y="100" width="240" height="10" fill="chocolate" />
+                    <rect x="65" y="80" width="130" height="20" fill="goldenrod" />
+                    <polygon points="176 68 185 68 189 80 172 80" fill="#A0A0A0" />
+
+                    <!-- rotation point -->
+                    <rect x="100" y="55" width="26" height="25" fill="gray" />
+                    <circle cx="113" cy="55" r="13" fill="#909090" />
+
+                    <!-- spring -->
+                    <g id="spring">
+                        <path d="M 145 60 L 150 60 
+                                L 144 64 L 151 64
+                                L 143 69 L 152 69
+                                L 142 74 L 153 74
+                                L 141 79 L 154 79" fill="none" stroke="gray" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                </svg>
+            </button>
         </div>
     </div>
 
