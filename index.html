@@ -27,7 +27,7 @@
             <!-- <div>Translated Input: <span id="translated-input"></span></div> -->
             <button id="morse-key-btn">
                 <!-- <img src="./image/machine_denken.png"> -->
-                <svg id="morse-key" width="300" height="150" viewBox="0 0 300 150">
+                <svg id="morse-key" width="300" height="140" viewBox="0 0 300 140">
 
                     <!-- spring -->
                     <g id="spring">
@@ -40,6 +40,14 @@
 
                     <!-- lever -->
                     <g id="lever" transform="rotate(-1, 113, 55)"> <!-- rest angle: -1; pressed angle: 3 -->
+
+                        <!-- contact gap adjustment -->
+                        <rect x="73" y="21" width="8" height="59" fill="#996739" rx="3" ry="8" />
+                        <line x1="77" y1="21" x2="77" y2="72" fill="none" stroke="#704C2A" stroke-width="8" stroke-dasharray="1" />
+                        <rect x="69" y="45" width="16" height="5" fill="#996739" />
+                        <rect x="65" y="37" width="24" height="8" fill="darkgoldenrod" />
+                        <rect x="66" y="19" width="22" height="10" fill="darkgoldenrod" />
+
                         <!-- metal bar -->
                         <path d="M 65 55 
                                 L 185 55
@@ -51,17 +59,26 @@
                         <!-- knob -->
                         <rect x="253" y="60" width="16" height="10" />
                         <polygon points="261 65 242 50 280 50" stroke="black" stroke-width="5" stroke-linejoin="round" />
+
+                        <!-- spring tension adjustment-->
+                        <rect x="139" y="45" width="16" height="5" fill="#996739" />
+                        <rect x="135" y="37" width="24" height="8" fill="darkgoldenrod" />
+                        <rect x="143" y="25" width="8" height="12" fill="#996739" />
+                        <line x1="147" y1="25" x2="147" y2="37" fill="none" stroke="#704C2A" stroke-width="8" stroke-dasharray="1" />
+                        <rect x="136" y="15" width="22" height="10" fill="darkgoldenrod" />
+
                     </g>
 
                     <!-- base -->
-                    <rect x="25" y="110" width="250" height="15" fill="brown" />
-                    <rect x="30" y="100" width="240" height="10" fill="chocolate" />
-                    <rect x="65" y="80" width="130" height="20" fill="goldenrod" />
+                    <path d="M 25 110 Q 37 110 40 92 L 260 92 Q 263 110 275 110 L 275 125 L 25 125 Z" fill="sienna" />
+                    <rect x="65" y="80" width="130" height="12" fill="darkgoldenrod" />
                     <polygon points="176 68 185 68 189 80 172 80" fill="#A0A0A0" />
+                    
 
                     <!-- rotation point -->
-                    <rect x="100" y="55" width="26" height="25" fill="gray" />
-                    <circle cx="113" cy="55" r="13" fill="#909090" />
+                    <rect x="100" y="55" width="26" height="25" fill="darkgoldenrod" />
+                    <circle cx="113" cy="55" r="13" fill="darkgoldenrod" />
+                    <circle cx="113" cy="55" r="11" fill="#C49A31" />
 
                 </svg>
             </button>
