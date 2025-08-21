@@ -1,16 +1,23 @@
-// DOM elements
+// DOM elements 
+let audio = document.getElementById("audio");
 let morseInput = document.getElementById("morse-input");
 // let translatedInput = document.getElementById("translated-input");
-let mouse = document.getElementById("morse-key");
+
+// Form-related DOM elements
 let username = document.getElementById("username");
 let password = document.getElementById("password");
 let confirmPassword = document.getElementById("confirm-password");
+
+// Input panel DOM elements
 let inputPanel = document.getElementById("input-panel");
 let inputPanelContainer = document.getElementById("input-panel-container");
 let closeBtn = document.getElementById("close-btn");
 let morseKeyBtn = document.getElementById("morse-key-btn");
+
+// SVG elements
 let spring = document.getElementById("spring");
 let lever = document.getElementById("lever");
+
 
 // Global variables
 let startTime;
@@ -88,14 +95,20 @@ function decodeChar(code) {
 
 // mouse event handlers
 function startHandler() {
+    // duration calculation
     clearTimeout(timeoutID);
     startTime = Date.now();
+
+    // change svg
+    lever.setAttribute("transform", "rotate(3, 113, 55)");
+    spring.setAttribute("transform", "translate(147 79) scale(1, 0.9) translate(-147 -79)");
+
+    audio.play();
 }
 
 function endHandler() {
+    // determine dot or dash
     duration = Date.now() - startTime;
-
-    // if short click then dot, if long press then dash
     if (duration < 200) {
         letterCode = letterCode + ".";
     } else {
@@ -107,6 +120,12 @@ function endHandler() {
     timeoutID = setTimeout(() => {
         decodeChar(letterCode);
     }, 1000);
+
+    // change svg
+    lever.setAttribute("transform", "rotate(-1, 113, 55)");
+    spring.setAttribute("transform", "translate(147 79) scale(1, 1) translate(-147 -79)");
+
+    audio.pause();
 }
 
 // text box focus handler
@@ -125,21 +144,11 @@ function closeInputPanel() {
 }
 
 
-mouse.onpointerdown = startHandler;
-mouse.onpointerup = endHandler;
+morseKeyBtn.onpointerdown = startHandler;
+morseKeyBtn.onpointerup = endHandler;
 
 username.onfocus = () => changeFocus(true, false, false);
 password.onfocus =  () => changeFocus(false, true, false);
 confirmPassword.onfocus = () => changeFocus(false, false, true);
 
 closeBtn.onclick = closeInputPanel;
-
-morseKeyBtn.onpointerdown = () => {
-    lever.setAttribute("transform", "rotate(3, 113, 55)");
-    spring.setAttribute("transform", "translate(147 79) scale(1, 0.9) translate(-147 -79)");
-}
-
-morseKeyBtn.onpointerup = () => {
-    lever.setAttribute("transform", "rotate(-1, 113, 55)");
-    spring.setAttribute("transform", "translate(147 79) scale(1, 1) translate(-147 -79)");
-}

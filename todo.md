@@ -23,7 +23,7 @@
   - [x] centering input fields
   - [ ] input panel
     - [ ] display: flex or grid
-    - [ ] morse key icon
+    - [x] morse key icon
     - [ ] current character input
     - [ ] morse code chart
       - [ ] chart icon (or ? icon)
@@ -32,10 +32,10 @@
       - [ ] caption: Morse code chart
 
 - [ ] telegraph key
-  - [ ] svg
+  - [x] svg
   - [ ] on hover
-  - [ ] on click
-  - [ ] add audio on pointerdown event
+  - [x] on click
+  - [x] add audio on pointerdown event
 
 - [ ] After submit
   - [ ] check if all fields contain at least 1 alphabet and at least 1 number
