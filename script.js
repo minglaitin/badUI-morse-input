@@ -140,7 +140,7 @@ function changeFocus(username, password, confirmPassword) {
 
 function closeInputPanel() {
     inputPanelContainer.style.visibility = "hidden";
-    inputPanel.style.bottom = "-200px";
+    inputPanel.style.bottom = "-100%";
 }
 
 
