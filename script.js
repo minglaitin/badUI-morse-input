@@ -13,6 +13,7 @@ let inputPanel = document.getElementById("input-panel");
 let inputPanelContainer = document.getElementById("input-panel-container");
 let closeBtn = document.getElementById("close-btn");
 let morseKeyBtn = document.getElementById("morse-key-btn");
+let finger = document.getElementById("finger");
 
 // SVG elements
 let spring = document.getElementById("spring");
@@ -28,6 +29,7 @@ let timeoutID = 0;
 let usernameFocus = false;
 let passwordFocus = false;
 let confirmPasswordFocus = false;
+let keyPressed = false;
 
 const MORSE_CODE = {
     ".-": "a",
@@ -95,6 +97,8 @@ function decodeChar(code) {
 
 // mouse event handlers
 function startHandler() {
+    keyPressed = true;
+
     // duration calculation
     clearTimeout(timeoutID);
     startTime = Date.now();
@@ -104,28 +108,33 @@ function startHandler() {
     spring.setAttribute("transform", "translate(147 79) scale(1, 0.9) translate(-147 -79)");
 
     audio.play();
+    finger.style.top = "60px";
 }
 
 function endHandler() {
-    // determine dot or dash
-    duration = Date.now() - startTime;
-    if (duration < 200) {
-        letterCode = letterCode + ".";
-    } else {
-        letterCode = letterCode + "-";
+    if (keyPressed) {
+        // determine dot or dash
+        duration = Date.now() - startTime;
+        if (duration < 200) {
+            letterCode = letterCode + ".";
+        } else {
+            letterCode = letterCode + "-";
+        }
+        morseInput.innerHTML = letterCode;
+
+        // 1 sec between each character
+        timeoutID = setTimeout(() => {
+            decodeChar(letterCode);
+        }, 1000);
+
+        // change svg
+        lever.setAttribute("transform", "rotate(-1, 113, 55)");
+        spring.setAttribute("transform", "translate(147 79) scale(1, 1) translate(-147 -79)");
+
+        audio.pause();
+        finger.style.top = "0";
     }
-    morseInput.innerHTML = letterCode;
-
-    // 1 sec between each character
-    timeoutID = setTimeout(() => {
-        decodeChar(letterCode);
-    }, 1000);
-
-    // change svg
-    lever.setAttribute("transform", "rotate(-1, 113, 55)");
-    spring.setAttribute("transform", "translate(147 79) scale(1, 1) translate(-147 -79)");
-
-    audio.pause();
+    keyPressed = false;
 }
 
 // text box focus handler
@@ -146,6 +155,13 @@ function closeInputPanel() {
 
 morseKeyBtn.onpointerdown = startHandler;
 morseKeyBtn.onpointerup = endHandler;
+morseKeyBtn.onpointerenter = () => {
+    finger.style.visibility = "visible";
+};
+morseKeyBtn.onpointerleave = () => {
+    finger.style.visibility = "hidden";
+    endHandler();
+};
 
 username.onfocus = () => changeFocus(true, false, false);
 password.onfocus =  () => changeFocus(false, true, false);

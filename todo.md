@@ -22,7 +22,7 @@
 - [ ] styling
   - [x] centering input fields
   - [ ] input panel
-    - [ ] display: flex or grid
+    - [x] display: grid
     - [x] morse key icon
     - [ ] current character input
     - [ ] morse code chart
@@ -31,9 +31,9 @@
       - [x] open link on same tab
       - [ ] caption: Morse code chart
 
-- [ ] telegraph key
+- [x] telegraph key
   - [x] svg
-  - [ ] on hover
+  - [x] on hover
   - [x] on click
   - [x] add audio on pointerdown event
 
