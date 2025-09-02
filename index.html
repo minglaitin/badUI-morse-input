@@ -24,10 +24,25 @@
         <div id="input-panel">
             
             <div id="input-panel-left">
-                <div>Current Input: <span id="morse-input"></span></div>
+                <div class="current-input">Current Input: <span id="morse-input"></span></div>
                 <!-- <div>Translated Input: <span id="translated-input"></span></div> -->
-                <!-- <a href="https://en.wikipedia.org/wiki/Morse_code" class="help-btn">Help</a> -->
-                 <button class="help-btn" onclick="location.href='https://en.wikipedia.org/wiki/Morse_code'"></button>
+                <button class="help-btn" onclick="location.href='https://en.wikipedia.org/wiki/Morse_code'">
+                    <svg width="120" height="160" viewBox="-10 10 140 150">
+                        <!-- shape: rectangle, width: 120, height: 170 -->
+                        <path d="M 7 0 L 113 0 Q 120 0 120 7
+                                L 120 140 L 90 170
+                                L 7 170 Q 0 170 0 163
+                                L 0 7 Q 0 0 7 0
+                                M 120 140 L 90 140 L 90 170" fill="white" stroke="black" stroke-width="6" />
+                        <text x="12" y="27" class="help-btn-cheatsheet">Cheatsheet</text>
+                        <path d="M 15 40 L 105 40 
+                                 M 15 55 L 105 55
+                                 M 15 70 L 105 70
+                                 M 15 85 L 105 85
+                                 M 15 100 L 105 100
+                                 M 15 115 L 105 115" fill="none" stroke="gray" stroke-width="4" />
+                    </svg>
+                 </button>
             </div>
             <div id="input-panel-right">
                 <img src="./finger.svg" id="finger">

@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -103,19 +104,34 @@ body {
     color: red;
 }
 
+.current-input {
+    display: none;
+}
+
 .help-btn {
-    
-    /* CSS for putting at lower right corner
-    position: absolute;
-    right: 10px;
-    bottom: 10px; */
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     margin: 0 auto;
     cursor: pointer;
-    text-decoration: none;
-    color: transparent;
-    font-size: 20px;
+    background-color: white;
+    border: none;
+}
+
+.help-btn:hover {
+    background-color: #F0F0F0;
+}
+
+.help-btn svg {
+    scale: 1.4;
+}
+
+.help-btn-cheatsheet {
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: bold;
+    fill: gray;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
 }
 
 #close-btn:hover {
@@ -144,5 +160,5 @@ body {
     z-index: -1;
     visibility: hidden;
     user-select: none;
-    transition: top 50ms;
+    transition: top 50ms linear;
 }

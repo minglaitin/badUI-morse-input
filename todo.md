@@ -7,6 +7,7 @@
   - [x] click to open telegraph key panel
   - [x] X button to close telegraph key panel
   - [x] disable computer keyboard
+  - [ ] close input panel after each character
 
 - [x] morse key functionality
   - [x] dot (dit): 1 unit (< 0.2 sec)
@@ -14,22 +15,22 @@
   - [x] space between dots/dashes: 1 unit (every mouseup event)
   - [x] space between characters: 3 units (>= 1 sec)
   - [ ] 8 dots for deleting 1 character (on password fields)
+  - [ ] Caption: supported characters: a-z, 0-9
 
 - [x] morse code to implement
   - [x] A-Z
   - [x] 0-9
 
-- [ ] styling
+- [x] styling
   - [x] centering input fields
-  - [ ] input panel
+  - [x] input panel
     - [x] display: grid
     - [x] morse key icon
-    - [ ] current character input
-    - [ ] morse code chart
-      - [ ] chart icon (or ? icon)
+    - [x] morse code chart
+      - [x] chart icon
       - [x] link to Wikipedia
       - [x] open link on same tab
-      - [ ] caption: Morse code chart
+      - [x] caption: cheatsheet
 
 - [x] telegraph key
   - [x] svg
