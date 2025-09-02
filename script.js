@@ -7,6 +7,7 @@ let morseInput = document.getElementById("morse-input");
 let username = document.getElementById("username");
 let password = document.getElementById("password");
 let confirmPassword = document.getElementById("confirm-password");
+let usernameClear = document.getElementById("username-clear");
 
 // Input panel DOM elements
 let inputPanel = document.getElementById("input-panel");
@@ -104,6 +105,8 @@ function decodeChar(code) {
     // reset current input
     letterCode = "";
     morseInput.innerHTML = letterCode;
+
+    username.value ? usernameClear.style.display = "inline" : usernameClear.style.display = "none";
 }
 
 // mouse event handlers
@@ -177,5 +180,9 @@ morseKeyBtn.onpointerleave = () => {
 username.onfocus = () => changeFocus(true, false, false);
 password.onfocus =  () => changeFocus(false, true, false);
 confirmPassword.onfocus = () => changeFocus(false, false, true);
+usernameClear.onclick = () => {
+    username.value = "";
+    usernameClear.style.display = "none";
+};
 
 closeBtn.onclick = closeInputPanel;

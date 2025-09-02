@@ -3,7 +3,7 @@
   - [ ] password field
   - [ ] confirm password field
   - [x] update value by morse input
-  - [ ] clear text box (on username field)
+  - [x] clear text box (on username field)
   - [x] click to open telegraph key panel
   - [x] X button to close telegraph key panel
   - [x] disable computer keyboard
