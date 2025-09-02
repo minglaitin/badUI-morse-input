@@ -67,7 +67,8 @@ const MORSE_CODE = {
     "--...": "7",
     "---..": "8",
     "----.": "9",
-    "-----": "0"
+    "-----": "0",
+    "........": "DEL"
 };
 
 function decodeChar(code) {
@@ -83,11 +84,21 @@ function decodeChar(code) {
 
     // update value in the textbox on focus
     if (usernameFocus) {
-        username.value = username.value + newChar;
+        if (newChar !== "DEL") {
+            username.value = username.value + newChar;
+        }
     } else if (passwordFocus) {
-        password.value = password.value + newChar;
+        if (newChar !== "DEL") {
+            password.value = password.value + newChar;
+        } else {
+            password.value = password.value.slice(0, -1);
+        }
     } else if (confirmPasswordFocus) {
-        confirmPassword.value = confirmPassword.value + newChar;
+        if (newChar !== "DEL") {
+            confirmPassword.value = confirmPassword.value + newChar;
+        } else {
+            confirmPassword.value = confirmPassword.value.slice(0, -1);
+        }
     }
 
     // reset current input
