@@ -38,8 +38,8 @@
   - [x] on click
   - [x] add audio on pointerdown event
 
-- [ ] After submit
-  - [ ] check if all fields contain at least 1 alphabet and at least 1 number
-  - [ ] check if password & confirm password are same
-    - [ ] if same, dialog box saying welcome
-    - [ ] if not same, ask for input again
+- [x] After submit
+  - [x] check if all fields contain at least 1 alphabet and at least 1 number
+  - [x] check if password & confirm password are same
+    - [x] if same, dialog box saying welcome
+    - [x] if not same, ask for input again
