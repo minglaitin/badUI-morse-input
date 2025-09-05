@@ -1,7 +1,5 @@
 // DOM elements 
 let audio = document.getElementById("audio");
-// let morseInput = document.getElementById("morse-input");
-// let translatedInput = document.getElementById("translated-input");
 
 // Form-related DOM elements
 let username = document.getElementById("username");
@@ -21,12 +19,10 @@ let finger = document.getElementById("finger");
 let spring = document.getElementById("spring");
 let lever = document.getElementById("lever");
 
-
 // Global variables
 let startTime;
 let duration;
 let letterCode = "";
-// let decodedResult = "";
 let timeoutID = 0;
 let usernameFocus = false;
 let passwordFocus = false;
@@ -81,9 +77,6 @@ function decodeChar(code) {
         newChar = "";
     }
 
-    // decodedResult = decodedResult + newChar;
-    // translatedInput.innerHTML = decodedResult;
-
     // update value in the textbox on focus
     if (usernameFocus) {
         if (newChar !== "DEL") {
@@ -102,13 +95,10 @@ function decodeChar(code) {
             confirmPassword.value = confirmPassword.value.slice(0, -1);
         }
     }
-
-    // reset current input
-    letterCode = "";
-    // morseInput.innerHTML = letterCode;
-    closeInputPanel();
-
     username.value ? usernameClear.style.display = "inline" : usernameClear.style.display = "none";
+
+    letterCode = "";
+    closeInputPanel();
 }
 
 // mouse event handlers
@@ -136,7 +126,6 @@ function endHandler() {
         } else {
             letterCode = letterCode + "-";
         }
-        // morseInput.innerHTML = letterCode;
 
         // 1 sec between each character
         timeoutID = setTimeout(() => {
@@ -159,6 +148,7 @@ function changeFocus(username, password, confirmPassword) {
     passwordFocus = password;
     confirmPasswordFocus = confirmPassword;
 
+    // open input panel
     inputPanelContainer.style.visibility = "visible";
     inputPanel.style.bottom = 0;
 
