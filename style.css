@@ -89,17 +89,18 @@ body {
     bottom: -100%;
     display: grid;
     grid-template-columns: 1fr 600px 1fr;
-    align-items: center;
     background-color: transparent;
     transition: 0.4s;
 }
 
 #input-panel-left {
+    margin-top: 130px;
     grid-column: 1;
     text-align: center;
 }
 
 #input-panel-right {
+    margin-top: 160px;
     grid-column: 3;
 }
 
@@ -176,12 +177,12 @@ body {
 #morse-key-btn {
     width: 302px;
     height: 142px;
-    margin-left: 30px;
+    margin: auto;
     padding: 0;
+    display: block;
     cursor: pointer;
     background-color: transparent;
     border: 1px solid transparent;
-    display: block;
 }
 
 #morse-key {
@@ -190,9 +191,11 @@ body {
 
 #finger {
     width: 200px;
+    margin: auto;
     position: relative;
-    left: 175px;
+    left: 95px;
     z-index: -1;
+    display: block;
     visibility: hidden;
     user-select: none;
     transition: top 50ms linear;
