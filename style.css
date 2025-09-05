@@ -83,25 +83,29 @@ body {
 }
 
 #input-panel {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     position: fixed;
     bottom: -100%;
-    display: grid;
-    grid-template-columns: 1fr 600px 1fr;
     background-color: transparent;
     transition: 0.4s;
 }
 
 #input-panel-left {
-    margin-top: 130px;
-    grid-column: 1;
+    width: calc((100% - 600px) / 2);
+    height: 100%;
+    padding-top: 130px;
+    position: absolute;
+    left: 0;
     text-align: center;
 }
 
 #input-panel-right {
-    margin-top: 160px;
-    grid-column: 3;
+    width: calc((100% - 600px) / 2);
+    height: 100%;
+    padding-top: 160px;
+    position: absolute;
+    right: 0;
 }
 
 #close-btn {
