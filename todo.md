@@ -15,7 +15,7 @@
   - [x] space between dots/dashes: 1 unit (every mouseup event)
   - [x] space between characters: 3 units (>= 1 sec)
   - [x] 8 dots for deleting 1 character (on password fields)
-  - [ ] Caption: supported characters: a-z, 0-9
+  - [x] Caption: supported characters: a-z, 0-9
 
 - [x] morse code to implement
   - [x] A-Z

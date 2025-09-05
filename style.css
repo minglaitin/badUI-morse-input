@@ -117,9 +117,7 @@ body {
     color: red;
 }
 
-.current-input {
-    display: none;
-}
+/* left panel */
 
 .help-btn {
     width: 280px;
@@ -146,6 +144,30 @@ body {
     letter-spacing: 0.3px;
     text-transform: uppercase;
 }
+
+.help-btn-caption ul {
+    width: 200px;
+    margin: 5px auto;
+    text-align: left;
+    font-size: 18px;
+    color: #404040;
+}
+
+.help-btn-caption li {
+    margin: 5px 0 0 18px;
+}
+
+.help-btn-caption li:first-child {
+    margin-left: 0;
+    list-style: none;
+}
+
+#help-btn-caption-backspace {
+    visibility: hidden;
+    color: navy;
+}
+
+/* right panel */
 
 #close-btn:hover {
     color: maroon;

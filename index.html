@@ -25,7 +25,7 @@
         <div id="input-panel">
             
             <div id="input-panel-left">
-                <div class="current-input">Current Input: <span id="morse-input"></span></div>
+                <!-- <div class="current-input">Current Input: <span id="morse-input"></span></div> -->
                 <!-- <div>Translated Input: <span id="translated-input"></span></div> -->
                 <button class="help-btn" onclick="location.href='https://en.wikipedia.org/wiki/Morse_code'">
                     <svg width="120" height="160" viewBox="-10 10 140 150">
@@ -43,7 +43,15 @@
                                  M 15 100 L 105 100
                                  M 15 115 L 105 115" fill="none" stroke="gray" stroke-width="4" />
                     </svg>
-                 </button>
+                </button>
+                <div class="help-btn-caption">
+                    <ul>
+                        <li>Supported characters</li>
+                        <li>a - z</li>
+                        <li>0 - 9</li>
+                        <li id="help-btn-caption-backspace">backspace (8 dots)</li>
+                    </ul>
+                </div>
             </div>
             <div id="input-panel-right">
                 <img src="./finger.svg" id="finger">

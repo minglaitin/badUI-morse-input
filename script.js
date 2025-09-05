@@ -1,6 +1,6 @@
 // DOM elements 
 let audio = document.getElementById("audio");
-let morseInput = document.getElementById("morse-input");
+// let morseInput = document.getElementById("morse-input");
 // let translatedInput = document.getElementById("translated-input");
 
 // Form-related DOM elements
@@ -13,6 +13,7 @@ let usernameClear = document.getElementById("username-clear");
 let inputPanel = document.getElementById("input-panel");
 let inputPanelContainer = document.getElementById("input-panel-container");
 let closeBtn = document.getElementById("close-btn");
+let captionBackspace = document.getElementById("help-btn-caption-backspace");
 let morseKeyBtn = document.getElementById("morse-key-btn");
 let finger = document.getElementById("finger");
 
@@ -104,7 +105,7 @@ function decodeChar(code) {
 
     // reset current input
     letterCode = "";
-    morseInput.innerHTML = letterCode;
+    // morseInput.innerHTML = letterCode;
 
     username.value ? usernameClear.style.display = "inline" : usernameClear.style.display = "none";
 }
@@ -134,7 +135,7 @@ function endHandler() {
         } else {
             letterCode = letterCode + "-";
         }
-        morseInput.innerHTML = letterCode;
+        // morseInput.innerHTML = letterCode;
 
         // 1 sec between each character
         timeoutID = setTimeout(() => {
@@ -159,6 +160,12 @@ function changeFocus(username, password, confirmPassword) {
 
     inputPanelContainer.style.visibility = "visible";
     inputPanel.style.bottom = 0;
+
+    if (passwordFocus || confirmPasswordFocus) {
+        captionBackspace.style.visibility = "visible";
+    } else {
+        captionBackspace.style.visibility = "hidden";
+    }
 }
 
 function closeInputPanel() {
