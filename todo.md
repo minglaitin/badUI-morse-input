@@ -1,7 +1,7 @@
-- [ ] input field
+- [x] input field
   - [x] username field
-  - [ ] password field
-  - [ ] confirm password field
+  - [x] password field
+  - [x] confirm password field
   - [x] update value by morse input
   - [x] clear text box (on username field)
   - [x] click to open telegraph key panel
