@@ -106,6 +106,7 @@ function decodeChar(code) {
     // reset current input
     letterCode = "";
     // morseInput.innerHTML = letterCode;
+    closeInputPanel();
 
     username.value ? usernameClear.style.display = "inline" : usernameClear.style.display = "none";
 }

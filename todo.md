@@ -7,7 +7,7 @@
   - [x] click to open telegraph key panel
   - [x] X button to close telegraph key panel
   - [x] disable computer keyboard
-  - [ ] close input panel after each character
+  - [x] close input panel after each character
 
 - [x] morse key functionality
   - [x] dot (dit): 1 unit (< 0.2 sec)
